@@ -4,7 +4,7 @@
       <Nav />
     </div>
     <div class="routerView">
-      <router-view></router-view>
+      <router-view ></router-view>
     </div>
     <div class="foot">
       <Foot/>
@@ -39,6 +39,7 @@ export default {
     }
     body {
       border-top: 5px solid $p3;
+      font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
     .el-row{
         margin: auto;
@@ -46,12 +47,15 @@ export default {
   .routerView{
     background: $p1;
   }
-  .routerView>div{
+    .el-carousel__container{
+      height: 600px!important;
+    }
+/*  .routerView>div{
     min-height: calc(100% - 30px);
   }
   .routerView>div>div{
     height: 100%;
-  }
+  }*/
   .el-row{
     margin: auto!important;
     padding: 0 20px;
@@ -65,7 +69,6 @@ export default {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  height: 100vh;
   overflow-y: auto;
 
 }

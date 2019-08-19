@@ -2,7 +2,7 @@
  <div class="about-us">
     <img-nav type="aboutUs" />
      <el-row class="tac">
-         <el-col :span="8">
+         <el-col :span="6">
              <div class="tabWrapper">
                  <ul class="tab">
                      <li v-for="(item, index) in tabList" :label="item.label" :key="index" :class="{activeTab: $store.state.activeMenuName === item.title}">
@@ -20,22 +20,40 @@
                  </ul>
              </div>
          </el-col>
-         <el-col :span="14">
+         <el-col :span="16">
+             <div class="content">
+                 Headquartered in Singapore. BI Components strives to be a world leading independent distributor specialist, offering comprehensive wafer and bare die inventory for hybrid IC and multi-chip module manufacturers in global marketplace. BI's extensive product line of hi-reliability bare die components, has made the company one the top and largest bare die supplier of choice for Aerospace, Defense, Space, Medical, and Industrial markets in Asia and worldwide.<br/>
+                 The corporate facility is equipped with ESD protected class 10,000 cleanrooms, nitrogen-filled and hermetically sealed stored inventory. Combined with strict ISO9100 quality systems, our extensive inventory ensures quick delivery without compromise to quality. All dies are visually inspected to MIL-STD-833 methods and 100% probed. Aerospace-grade products are 100% screened and aging-tested.<br/>
+                 Our services have grown more extensive and has been dedicated to multi-chip module (MCM), hybrid integrated circuit (HIC), chip-on-board (COB) and single-chip integrated circuit packaging solutions. With broadest offering of bare die products and value-added processing in the industry, BI Components became recognized as a leading bare die add value provider in Asian and global marketplace.
+
+             </div>
              <div class="tabContent">
-                 <div v-if="activeTabName === 'Career'" class="Career">
-                     Career
+                 <div v-if="activeTabName === 'aboutUs'" class="Career">
                  </div>
                  <div  v-if="activeTabName === 'Contact Us'" class="ContactUs">
-                     Contact Us
+                     <h2>Corporate Headquarters</h2>
+                     <div>
+                             <p>
+                                 51 Goldhill Plaza #07-10/11<br/>
+                                 Singapore 308900<br/>
+                                 TEL:+65 98915586<br/>
+                                 FAX:+65 63543261<br/>
+                                 sales@bi-components.com
+
+                             </p>
+                             <img src="../images/ha.jpeg"/>
+                     </div>
                  </div>
              </div>
+         </el-col>
+         <el-col :span="2">
          </el-col>
      </el-row>
  </div>
 </template>
 <script>
     import { navNew } from '../config'
-    import ImgNav from '@/components/ImgNav' 
+    import ImgNav from '@/components/ImgNav'
 
     export default {
         components: {
@@ -53,6 +71,7 @@
                 if(this.$store.state.activeMenuName !== tab.title){
                     this.$store.commit('setActiveMenuName',tab.title)
                 }
+                this.activeTabName = this.$store.state.activeMenuName
                 /// 获取请求获取数据
 
             },
@@ -64,9 +83,42 @@
         }
     }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .about-us {
     color: $light-color;
     min-height: 400px;
 }
+.content{
+    font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.25em;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-align: left;
+    padding: 15px 0 20px 20px;
+    border-left: 1px solid #e4e7ed;
+}
+    .tabContent{
+        div{
+            h2{
+                font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+                font-size: 2.25em;
+                font-weight: normal;
+                letter-spacing: 1px;
+                margin: 1em 0;
+                text-align: left;
+            }
+            div{
+                display: flex;
+                p{
+                    margin-bottom: 1rem;
+                    font-size: inherit;
+                    line-height: 1.6;
+                    text-rendering: optimizeLegibility;
+                    width: 270px;
+                }
+                img{width: 500px;height: 180px}
+            }
+        }
+
+    }
 </style>

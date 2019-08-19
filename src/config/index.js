@@ -17,7 +17,8 @@ export const tableInfo = {
     tableColumn: [
         {
             prop: 'HRPartNumber',
-            label: 'HR Part Number'
+            label: 'HR Part Number',
+            width: 150
         },
         {
             prop: 'Generic',
@@ -33,7 +34,8 @@ export const tableInfo = {
         },
         {
             prop: 'MemorySpeed',
-            label: 'Memory Speed'
+            label: 'Memory Speed',
+            width: 140
         },
         {
             prop: 'Description',
@@ -41,7 +43,7 @@ export const tableInfo = {
         },
         {
             prop: 'AlternativePartNumber1',
-            label: 'Alternative Part Number1'
+            label: 'Alternative Part Number1',
         },
         {
             prop: 'AlternativePartNumber2',
@@ -113,7 +115,7 @@ export const navNew = [
         children: [
             {
                 title: 'Manufacturing',
-                routePath: '/services/ms',
+                routePath: '/services',
                 parent: 'Services'
             },
             // {

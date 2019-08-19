@@ -1,9 +1,9 @@
 <template>
     <div style="margin-top: 30px">
-        <search />
+        <search :searchHandler="searchHandler"/>
          <img-nav type="products" />
         <el-row class="tac">
-            <el-col :span="8">
+            <el-col :span="6">
                 <div class="tabWrapper">
                     <ul class="tab">
                         <li v-for="(item, index) in tabList" :label="item.title" :key="index" :class="{activeTab: $store.state.activeMenuName === item.title}">
@@ -21,9 +21,13 @@
                     </ul>
                 </div>
             </el-col>
-            
-            <el-col :span="14">
-                <router-view :tableData="tableData" :tableColumn="tableColumn" :type="type"/>
+            <el-col :span="16">
+                <router-view :tableData="tableData" 
+                    :tableColumn="tableColumn" 
+                    :type="type"
+                    ref="table"/>
+            </el-col>
+            <el-col :span="2">
             </el-col>
         </el-row>
     </div>
@@ -59,35 +63,38 @@
             this.$store.commit('setActiveMenuName', this.activeMenuName)
             if (this.$router.currentRoute.path !== item.routePath) {
                 this.$router.push(item.routePath)
-            } 
+            }
             //this.$router.push(item.routePath)
             const data = {
-              memory,
-              linear,
-              logic,
-              opto, 
-              dt
+                memory,
+                linear,
+                logic,
+                opto,
+                dt
             }
-           this.type = item.label;
-          this.tableData = data[this.type]
+            this.type = item.label;
+            this.tableData = data[this.type]
+            this.$store.commit('setSearchValue', '');
         },
-    
+        searchHandler (hRPartNumber) {
+            console.log(this.$refs.table);
+        },
       handleClick (type) {
           const data = {
               memory,
               linear,
               logic,
-              opto, 
+              opto,
               dt
           }
-          
+
           this.tableData = data[type]
           //this.content = content[type]
       },
       tabSubClick(tabSub){
           this.activeSubTabName = tabSub.title
           /// 获取请求获取数据
-          
+
           let tableData = []
           for(let i = 0; i < 20; i++){ //测试数据
               tableData.push({
@@ -110,5 +117,5 @@
   }
 </script>
 <style scoped lang="scss">
-
+    
 </style>

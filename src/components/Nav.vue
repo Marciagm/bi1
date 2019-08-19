@@ -4,7 +4,7 @@
             <el-col :span="12">
                 <img src="../images/logo.png" style="width: 278px; margin-top: 5px;" @click="goHome"/>
             </el-col>
-            <el-col :span="3" v-for="(Item, index) in navNew" :key="index" style="margin-top: 80px;">
+            <el-col :span="3" v-for="(Item, index) in navNew" :key="index" style="margin-top:60px;">
                 <div class="ChildrenMenu" v-if="Item.children && Item.children.length > 0" :class="{activeMenu: activeMenuName === Item.title}">
                     <h3 class="nav-link" @click="jump(Item)">{{Item.title.toUpperCase()}}</h3>
                     <ul>
@@ -31,27 +31,6 @@
             </div>
         </el-row> -->
         <!-- <search v-show="isSearchShow" /> -->
-        
-        <!-- <el-row>
-            <div class="navPicture" :class="{DieBank: activeMenuName === 'Die Bank',Products: activeMenuName === 'Products',Services: activeMenuName === 'Services',AboutUs: activeMenuName === 'About Us'}">
-                <div v-if="activeMenuName === 'Die Bank'">
-                    <h1>Die Bank</h1>
-                    <h2>hello,Die Bank</h2>
-                </div>
-                <div v-if="activeMenuName === 'Products'">
-                    <h1>Products</h1>
-                   <h2>hello, Products</h2>
-                </div>
-                <div v-if="activeMenuName === 'Services'">
-                    <h1>Services</h1>
-                    <h2>hello,Services</h2>
-                </div>
-                <div v-if="activeMenuName === 'About Us'">
-                    <h1>About Us</h1>
-                    <h2>hello,About Us</h2>
-                </div>
-            </div>
-        </el-row> -->
     </div>
 </template>
 <script>
@@ -100,8 +79,8 @@ export default {
             // 路由跳转
             if (this.$router.currentRoute.path !== value.routePath) {
                 this.$router.push(value.routePath)
-            } 
-            this.hideMenue();
+            }
+            //this.hideMenue();
         },
         goHome () {
             this.activeMenuName = ''
@@ -111,23 +90,14 @@ export default {
             }
         }
     },
-    watch: {
-        $route (from, to) {
-            if (this.$router.currentRoute.name !== 'index') {
-                this.isSearchShow = true
-            } else {
-                this.isSearchShow = false
-            }
-        }
-    }
 }
 </script>
 <style lang="scss" scoped>
     .nav {
         margin-bottom: 20px;
         vertical-align: bottom;
-        border-top: 6px solid $p1;
         .nav-link {
+            border-top: 3px solid #fff;
             font-size: 1.125em;
             color: #0a0a0a;
             font-weight: 900;
@@ -149,35 +119,26 @@ export default {
             display: none;
             min-width: 13.625em;
             border: none;
-            background: #4e2d66;
-            //background: #bdbdbb;
             text-align: left;
             padding-left: 1em;
-            color: white;
-            border-radius: 5px 0 5px 5px;
             li{
                 display: block;
                 padding: 0.7rem 2rem;
                 line-height: 1;
                 cursor: pointer;
                 font-weight: 900;
-                color: white;
                 margin-left: -1em;
                 &:hover{
-                    color: #ececec;
-                    background: rgba(255, 255, 255, 0.1);
+                    background: rgba(0, 0, 0, 0.07);
                 }
             }
         };
         .noChildrenMenu:hover{
             .nav-link{
-                background: #4e2d66;
-                border-top-color: #4e2d66;
+                border-top: 3px solid $p3;
+                background: #f3f3f3;
                 -webkit-box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.25);
                 box-shadow: 0.25em 0.25em 0.25em rgba(171, 170, 170, 0);
-                color: white;
-                //color: #000;
-                border-radius: 5px 5px 0 0;
             };
         };
         .ChildrenMenu{
@@ -186,18 +147,18 @@ export default {
         .ChildrenMenu:hover {
             ul{
                 display: block;
+                background: #f3f3f3;
                 top: 40px;
                 right: 0;
                 left: auto;
                 box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.25);
+                z-index: 1000;
             };
             .nav-link{
-                background: #4e2d66;
-                border-top-color: #4e2d66;
+                border-top: 3px solid $p3;
+                background: #f3f3f3;
                 -webkit-box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.25);
                 box-shadow: 0.25em 0.25em 0.25em rgba(0, 0, 0, 0.25);
-                color: white;
-                border-radius: 5px 5px 0 0;
             };
         }
     }
@@ -209,11 +170,11 @@ export default {
         /deep/ .el-select .el-input {
             width: 200px;
         }
-        
+
         /deep/ .customSelect .el-input__inner{
             height: 100%;
             font-size: 1.25em;
-            border-color: $light-color;
+            border-color: #f3f3f3;
         }
         /deep/ .customSelect .el-input--medium .el-input__icon {
             line-height: 100%;
@@ -221,23 +182,16 @@ export default {
         /deep/ .el-input-group__append{
             font-size: 1.25em;
             border-left: 0;
-            background: $light-color!important;
-            color: white;
-            border-color: $light-color;
         }
         /deep/ .el-input-group__prepend{
             font-size: 1em;
-            background: white !important;
-            border-color: $light-color;
-            background: $light-color!important;
-            color: white;
+            border-color: #f3f3f3;
         }
         /deep/ .el-select-dropdown__item.selected {
-            color: $light-color;
             font-weight: 700;
         }
     }
-    
+
     .navPicture{
         height: 300px;
         margin: auto -20px;
