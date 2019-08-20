@@ -1,10 +1,10 @@
 <template>
     <div class="nav">
         <el-row :gutter="20">
-            <el-col :span="12">
+            <el-col :span="8">
                 <img src="../images/logo.png" style="width: 278px;" @click="goHome"/>
             </el-col>
-            <el-col :span="3" v-for="(Item, index) in navNew" :key="index" style="margin-top: 10px;">
+            <el-col :span="4" v-for="(Item, index) in navNew" :key="index" style="margin-top: 10px;">
                 <div class="ChildrenMenu" v-if="Item.children && Item.children.length > 0">
                     <h3 class="nav-link" @click="jump(Item)">{{Item.title.toUpperCase()}}</h3>
                     <ul>
@@ -58,11 +58,10 @@
             text-align: left;
             li{
                 display: block;
-                padding: 0.5rem 0;
-                line-height: 1;
                 cursor: pointer;
                 text-align: left;
                 font-size: 0.8125em;
+                line-height: 20.8px;
             }
         };
     }

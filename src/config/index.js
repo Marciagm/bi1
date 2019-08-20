@@ -1,7 +1,7 @@
 import dieBankImg from '@/images/dieBank.jpeg'
 import productsImg from '@/images/products.png'
-import servicesImg from '@/images/services.jpeg'
-import aboutUsImg from '@/images/aboutUs.jpeg'
+import servicesImg from '@/images/services.jpg'
+import aboutUsImg from '@/images/aboutUs.jpg'
 
 export const Products = [
     'Memory',
@@ -148,18 +148,26 @@ export const imgNavInfo = {
     dieBank: {
         img: dieBankImg,
         text: '',
+        h1Text: 'Die Bank',
+        h2Text: ''
     },
     services: {
         img: servicesImg,
         text: '',
+        h1Text: '',
+        h2Text: ''
     },
     products: {
         img: productsImg,
         text: '',
+        h1Text: 'Products',
+        h2Text: 'Largest Source of EOL Products in Asia'
     },
     aboutUs: {
         img: aboutUsImg,
         text: '',
+        h1Text: '',
+        h2Text: ''
     }
 }
 export const content = {
@@ -178,7 +186,7 @@ export const content = {
     // A large range of products for obsolete Diodes applications is available, including: varactor diodes, TVS diodes, Tuning diodes, abrupt diodes, hyper abrupt diodes, Microwave, Zener diodes and rectifier diodes. We manufacture in glass, ceramic and surface mount SOT, SOD and MELF packages. Custom specifications are available。
 
     // Available transistors include small signal transistors, Darlington transistors, high voltage transistors and high-power transistors (to 300 Watts). Screening options include PIND, B.I. (up to 100A) and environmental testing. We offer standard and custom packaging for obsolete parts. Devices manufactured and tested to the highest specifications. Group A/B/C/D testing is available.`,
-    
+
     // About-Us: `Headquartered in Singapore. BI Components strives to be a world leading independent distributor specialist, offering comprehensive wafer and bare die inventory for hybrid IC and multi-chip module manufacturers in global marketplace. BI's extensive product line of hi-reliability bare die components, has made the company one the top and largest bare die supplier of choice for Aerospace, Defense, Space, Medical, and Industrial markets in Asia and worldwide.
     // The corporate facility is equipped with ESD protected class 10,000 cleanrooms, nitrogen-filled and hermetically sealed stored inventory. Combined with strict ISO9100 quality systems, our extensive inventory ensures quick delivery without compromise to quality. All dies are visually inspected to MIL-STD-833 methods and 100% probed. Aerospace-grade products are 100% screened and aging-tested.
     // Our services have grown more extensive and has been dedicated to multi-chip module (MCM), hybrid integrated circuit (HIC), chip-on-board (COB) and single-chip integrated circuit packaging solutions. With broadest offering of bare die products and value-added processing in the industry, BI Components became recognized as a leading bare die add value provider in Asian and global marketplace.`

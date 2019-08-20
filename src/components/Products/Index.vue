@@ -1,5 +1,5 @@
 <template>
-    <div style="margin-top: 30px">
+    <div>
         <search :searchHandler="searchHandler"/>
          <img-nav type="products" />
         <el-row class="tac">
@@ -22,6 +22,25 @@
                 </div>
             </el-col>
             <el-col :span="16">
+                <p class="content">
+                HiRel products (HR) in all package types to temperature range of -40°C/-55°C to +125°C and special specifications to +175°C. Manufactured under MIL-PRF-53835 and tested in accordance with MIL-STD-883, M5004 with optional B, C, D, group testing. 
+                </p>
+                <h1>这里要改！！！</h1>
+                <el-row>
+                    <el-col :span=12>
+                        <ul>
+                            <li>Memory(SRAM, EEPROM, FLASH and UVEPROM)</li>
+                        
+                            <li>Linear(Op-Amps, Comparators, Amplifiers, Comparators, References and more)</li>
+                        </ul>
+                    </el-col>
+                    <el-col :span=12>
+                       Logic(HC, HCT, FCT and more)
+OPTO(photo diodes, photo transistors, optocouplers and more)
+Diodes & Transistor
+                    </el-col>
+                </el-row>
+
                 <router-view :tableData="tableData" 
                     :tableColumn="tableColumn" 
                     :type="type"

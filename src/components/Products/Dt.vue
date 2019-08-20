@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="sub-content">
-            Force Technologies can provide virtually any diode or transistor for your HiRel application, critical testing and design support. Equivalents which conform to JAN, JANTX or JANTXV screening are possible.<br/>
+            Force Technologies can provide virtually any diode or transistor for your HiRel application, critical testing and design support. Equivalents which conform to JAN, JANTX or JANTXV screening are possible.<br/><br/>
 
             A large range of products for obsolete Diodes applications is available, including: varactor diodes, TVS diodes, Tuning diodes, abrupt diodes, hyper abrupt diodes, Microwave, Zener diodes and rectifier diodes. We manufacture in glass, ceramic and surface mount SOT, SOD and MELF packages. Custom specifications are available.<br/>
             <br />

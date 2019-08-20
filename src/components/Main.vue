@@ -5,8 +5,8 @@
         <button @click="jump">Search</button> -->
          <el-carousel :interval="10000" arrow="always">
              <el-carousel-item v-for="(item, index) in slideData" :key="index">
-                 <img :src="item.img" style="width: 100%; height: 600px"/>
-                 <h3>{{ item.text }}</h3>
+                 <img :src="item.img" style="width: 100%;"/>
+                 <h1>{{ item.text }}</h1>
              </el-carousel-item>
          </el-carousel>
      </div>
@@ -14,19 +14,19 @@
 </template>
 
 <style lang="scss" scoped>
-    .el-carousel__item h3 {
+    .el-carousel__item h1 {
         color: white;
-        font-size: 36px;
-        line-height: 600px;
+        line-height: 700px;
         margin: 0;
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         text-align: center;
-        text-shadow: 0px 3px 6px #17222d, 0px 2px 20px #17222d;
-
-
+        font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 2.375em;
+        font-weight: 900;
+        text-shadow: 0 0 0.25em rgba(0, 0, 0, 0.5);
     }
 
     .el-carousel__item:nth-child(2n) {
@@ -64,9 +64,9 @@
 }
 </style>
 <script>
-import wv from '@/images/wv.jpeg'
-import ha from '@/images/ha.jpeg'
-import largest from '@/images/largest.jpeg'
+import wv from '@/images/main1.jpg'
+import ha from '@/images/main2.jpg'
+import largest from '@/images/main3.jpg'
 export default {
     data () {
         return {

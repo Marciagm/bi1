@@ -35,9 +35,9 @@ export default {
 </script>
 <style lang="scss" scoped>
      .searchWrapper{
-        margin:30px 30px 30px 20%;
+        margin: 0 30px 0 20%;
         .customSelect{
-            height: 50px;
+            height: 65px;
         }
         /deep/ .el-select .el-input {
             width: 200px;
@@ -51,14 +51,37 @@ export default {
             line-height: 100%;
         }
         /deep/ .el-input-group__append{
-            font-size: 1.25em;
-            border-left: 0;
+            vertical-align: middle;
+            display: table-cell;
+            position: relative;
+            border: 1px solid #1485cc;
+            padding: 0 20px;
+            width: 1px;
+            white-space: nowrap;
+            background-color: #1485cc;
+            color: #fefefe;
         }
         /deep/ .el-input-group__prepend{
-            font-size: 1em;
+            vertical-align: middle;
+            display: table-cell;
+            position: relative;
+            border: 1px solid #DCDFE6;
+            border-radius: 4px;
+            padding: 0 20px;
+            width: 1px;
+            white-space: nowrap;
+            background-color: #ececec;
+            border-right: none;
+            color: #8d949d;
+            height: 100%;
+            margin: 0;
         }
         /deep/ .el-select-dropdown__item.selected {
             font-weight: 700;
         }
+         /deep/ .el-input__inner:focus {
+             border-color: #DCDFE6;
+             outline: 0;
+         }
     }
 </style>

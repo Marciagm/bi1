@@ -22,12 +22,13 @@
             </el-col>
             <el-col :span="16">
                 <div class="content">
-                   <h2> Wafer Processing</h2>
-                    Our in-house capabilities provide quick-turn wafer processing for Wafer Thinning, Back Metallization, Probing, Sawing, Visual Inspection, Pick and Place.<br/><br/>
-                    <h2>Finish Product Design</h2>
-                    BI can re-create the original device.  The end product is a form, fit, and functional replacement guaranteed to the original data sheet performance.<br/><br/>
-                    <h2>Test</h2>
-                    Our proven test protocol ensures the highest test quality with accuracy guaranteed; offering a wide variety of capabilities across multiple test platforms.
+                   <h2> Manufacturing</h2>
+                    <ul>
+                        <li>Our in-house capabilities provide quick-turn wafer processing for Wafer Thinning, Back Metallization, Probing, Sawing, Visual Inspection, Pick and Place.</li>
+                        <li> BI can re-create the original device.  The end product is a form, fit, and functional replacement guaranteed to the original data sheet performance.</li>
+                        <li>Our proven test protocol ensures the highest test quality with accuracy guaranteed; offering a wide variety of capabilities across multiple test platforms.</li>
+                    </ul>
+
 
                 </div>
                 <div class="tabContent">
@@ -90,12 +91,25 @@ export default {
     padding: 15px 0 20px 20px;
     border-left: 1px solid #e4e7ed;
     h2 {
-        font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        //font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-size: 1.25em;
         font-weight: bold;
-        letter-spacing: 1px;
+        //letter-spacing: 1px;
         margin-bottom: 1rem;
+        color: black;
+    }
+    ul{
+        margin: auto 10px;
+        li{
+            list-style: inside;
+            color: #0a0a0a;
+            font-size: 16px;
+            margin-bottom: 5px;
+            line-height: 30px;
+
+        }
     }
 }
+
 
 </style>

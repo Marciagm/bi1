@@ -26,7 +26,6 @@ const router = [
     },
     {
         path: '/products',
-        redirect: '/products/memory',
         name: 'products',
         component: Products,
         children: [

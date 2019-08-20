@@ -36,19 +36,22 @@ export default {
         padding: 0;
         margin: 0;
         border: 0;
+        
     }
     body {
       border-top: 5px solid $p3;
       font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: #fefefe;
+      color: #0a0a0a;
     }
     .el-row{
         margin: auto;
     }
   .routerView{
-    background: $p1;
+    background: #fefefe;
   }
     .el-carousel__container{
-      height: 600px!important;
+      height: 750px!important;
     }
 /*  .routerView>div{
     min-height: calc(100% - 30px);

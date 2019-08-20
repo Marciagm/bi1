@@ -15,25 +15,25 @@
                  <el-form-item label="Email Address" :label-width="formLabelWidth" prop="emailAddress">
                      <el-input v-model="form.emailAddress" autocomplete="off"></el-input>
                  </el-form-item>
-                 <el-form-item label="FirstName" :label-width="formLabelWidth" prop="firstName">
+                 <el-form-item label="First Name" :label-width="formLabelWidth" prop="firstName">
                      <el-input v-model="form.firstName" autocomplete="off"></el-input>
                  </el-form-item>
-                 <el-form-item label="LastName" :label-width="formLabelWidth" prop="lastName">
+                 <el-form-item label="Last Name" :label-width="formLabelWidth" prop="lastName">
                      <el-input v-model="form.lastName" autocomplete="off"></el-input>
                  </el-form-item>
                  <el-form-item label="Position" :label-width="formLabelWidth">
                      <el-input v-model="form.position" autocomplete="off"></el-input>
                  </el-form-item>
-                 <el-form-item label="CompanyName" :label-width="formLabelWidth">
+                 <el-form-item label="Company Name" :label-width="formLabelWidth">
                      <el-input v-model="form.companyName" autocomplete="off"></el-input>
                  </el-form-item>
-                 <el-form-item label="CompanyWebsite" :label-width="formLabelWidth" prop="companyWebsite">
+                 <el-form-item label="Company Website" :label-width="formLabelWidth" prop="companyWebsite">
                      <el-input v-model="form.companyWebsite" autocomplete="off"></el-input>
                  </el-form-item>
              </el-form>
              <div slot="footer" class="dialog-footer">
-                 <el-button @click="dialogFormVisible = false">取 消</el-button>
-                 <el-button type="primary" @click="submit">确 定</el-button>
+                 <el-button @click="dialogFormVisible = false" style="display: none">取 消</el-button>
+                 <el-button @click="submit">SIGN UP</el-button>
              </div>
          </el-dialog>
      </div>
@@ -130,13 +130,21 @@ export default {
             margin: auto 10px;
             li{
                 list-style: inside;
+                color: #0a0a0a;
             }
         }
         h2{
             margin: 10px auto;
+            color: black;
         }
         h3{
             margin-bottom: 10px;
+            color: black;
         }
+    }
+    .el-button:focus, .el-button:hover {
+        color: #fefefe;
+        border-color: #4e2d66;
+        background-color: #4e2d66;
     }
 </style>

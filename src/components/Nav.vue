@@ -1,20 +1,20 @@
 <template>
     <div class="nav">
         <el-row :gutter="20">
-            <el-col :span="12">
+            <el-col :span="8">
                 <img src="../images/logo.png" style="width: 278px; margin-top: 5px;" @click="goHome"/>
             </el-col>
-            <el-col :span="3" v-for="(Item, index) in navNew" :key="index" style="margin-top:60px;">
+            <el-col :span="3" v-for="(Item, index) in navNew" :key="index" style="margin-top: 65px;">
                 <div class="ChildrenMenu" v-if="Item.children && Item.children.length > 0" :class="{activeMenu: activeMenuName === Item.title}">
-                    <h3 class="nav-link" @click="jump(Item)">{{Item.title.toUpperCase()}}</h3>
+                    <div class="nav-link" @click="jump(Item)">{{Item.title}}</div>
                     <ul>
                         <li v-for="(submenu, i) in Item.children" :key="i" @click="jump(submenu)">
-                            {{submenu.title.toUpperCase()}}
+                            {{submenu.title}}
                         </li>
                     </ul>
                 </div>
                 <div v-else class="noChildrenMenu" :class="{activeMenu: activeMenuName === Item.title}">
-                    <h3 class="nav-link" @click="jump(Item)">{{Item.title.toUpperCase()}}</h3>
+                    <div class="nav-link" @click="jump(Item)">{{Item.title}}</div>
                 </div>
             </el-col>
         </el-row>
@@ -97,18 +97,21 @@ export default {
         margin-bottom: 20px;
         vertical-align: bottom;
         .nav-link {
-            border-top: 3px solid #fff;
-            font-size: 1.125em;
             color: #0a0a0a;
-            font-weight: 900;
             cursor: pointer;
             padding: 0.7rem 0;
             line-height: 1;
             text-align: center;
+            border-top: 2px solid transparent;
+            font-size: 1.125em;
+            text-transform: uppercase;
+            font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 900;
         };
         .activeMenu{
-            h3{
+            div{
                 box-sizing: border-box;
+                font-weight: 900;
             }
         }
         ul{
@@ -128,6 +131,7 @@ export default {
                 cursor: pointer;
                 font-weight: 900;
                 margin-left: -1em;
+                font-size: 0.9375em;
                 &:hover{
                     background: rgba(0, 0, 0, 0.07);
                 }
