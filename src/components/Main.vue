@@ -72,13 +72,14 @@ export default {
         return {
             slideData: [
                 {
-                    img: wv,
-                    text: 'Wide Variety of Testing Capabilities'
-                },
-                {
                     img: ha,
                     text: 'Hermetic Assembly for High Reliability and Demanding Environment'
                 },
+                {
+                    img: wv,
+                    text: 'Wide Variety of Testing Capabilities'
+                },
+                
 
                 {
                     img: largest,

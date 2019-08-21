@@ -22,13 +22,16 @@
             </el-col>
             <el-col :span="16">
                 <div class="content">
-                   <h2> Manufacturing</h2>
+                   <h2>Your Semiconductor Solutions.</h2>
+                    <h3>The largest continuous source of semiconductors in Asia.</h3>
                     <ul>
-                        <li>Our in-house capabilities provide quick-turn wafer processing for Wafer Thinning, Back Metallization, Probing, Sawing, Visual Inspection, Pick and Place.</li>
-                        <li> BI can re-create the original device.  The end product is a form, fit, and functional replacement guaranteed to the original data sheet performance.</li>
-                        <li>Our proven test protocol ensures the highest test quality with accuracy guaranteed; offering a wide variety of capabilities across multiple test platforms.</li>
-                    </ul>
+                        <li><span>Design</span> BI can re-create the original device.  The end product is a form, fit, and functional replacement guaranteed to the original data sheet performance.
+                        <li><span>Wafer Fab </span> Partnering with foundries to replicate the original manufacturers’ die.</li>
+                        <li><span>Test</span> Our proven test protocol ensures the highest test quality with accuracy guaranteed; offering a wide variety of capabilities across multiple test platforms.</li>
+                       <li><span> Wafer Processing</span> Our in-house capabilities provide quick-turn wafer processing for Wafer Thinning, Back Metallization, Probing, Sawing, Visual Inspection, Pick and Place.</li>
+                        <li><span>Long term storage</span> Providing inventory tracking for both wafer/die and finished products under controlled environment.</li>
 
+                    </ul>
 
                 </div>
                 <div class="tabContent">
@@ -86,27 +89,41 @@ export default {
     font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 1.25em;
     font-weight: normal;
-    letter-spacing: 1px;
+    //letter-spacing: 1px;
     text-align: left;
     padding: 15px 0 20px 20px;
     border-left: 1px solid #e4e7ed;
-    h2 {
-        //font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 1.25em;
-        font-weight: bold;
-        //letter-spacing: 1px;
-        margin-bottom: 1rem;
+    h2{
+        margin: 10px auto;
+        color: #8e8a8a;
+        font-size: 26px;
+        text-align: left;
+        &:after{
+            content: '';
+            height: 10px;
+            width: 95px;
+            border-bottom: 2px solid #4e2d66;
+            display: block;
+        }
+    }
+    h3{
+        margin-bottom: 10px;
         color: black;
+        font-size: 24px;
     }
     ul{
         margin: auto 10px;
         li{
-            list-style: inside;
+            list-style: none;
             color: #0a0a0a;
             font-size: 16px;
             margin-bottom: 5px;
             line-height: 30px;
-
+            span {
+                color: #4e2d66;
+                font-size: 16px;
+                font-weight: 900;
+            }
         }
     }
 }

@@ -32,17 +32,30 @@
                      FAX:+65 63543261<br>
                      sales@bi-components.com<br>
                  </p>
-                 Headquartered in Singapore. BI Components strives to be a world leading independent distributor specialist, offering comprehensive wafer and bare die inventory for hybrid IC and multi-chip module manufacturers in global marketplace. BI's extensive product line of hi-reliability bare die components, has made the company one the top and largest bare die supplier of choice for Aerospace, Defense, Space, Medical, and Industrial markets in Asia and worldwide.<br/><br/>
-                 The corporate facility is equipped with ESD protected class 10,000 cleanrooms, nitrogen-filled and hermetically sealed stored inventory. Combined with strict ISO9100 quality systems, our extensive inventory ensures quick delivery without compromise to quality. All dies are visually inspected to MIL-STD-833 methods and 100% probed. Aerospace-grade products are 100% screened and aging-tested.<br/><br/>
-                 Our services have grown more extensive and has been dedicated to multi-chip module (MCM), hybrid integrated circuit (HIC), chip-on-board (COB) and single-chip integrated circuit packaging solutions. With broadest offering of bare die products and value-added processing in the industry, BI Components became recognized as a leading bare die add value provider in Asian and global marketplace.
+                 <h1>
+                     Headquartered in Singapore. BI Components 
+                     strives to be a world leading semiconductor solutions provider.
+                 </h1>
+                <p class="aboutus-item">
+                    <span>Top and Largest Die Bank of Choice</span> 
+                    for Aerospace, Defense, Space, Medical, and Industrial markets in Asia and worldwide, with over 13,000 part numbers in stock.
+                </p>
+                <p>
+                    <span>BI Manufactures and Designs</span> certified and guaranteed end-of-life devices types in multi-chip module (MCM), hybrid integrated circuit (HIC), chip-on-board (COB) and single-chip integrated circuit with die in stock.
+                </p>
+                <p>
+                    <span>BI Services</span>
+                    through an extensive range of manufacturing solutions, including Wafer Processing, Product Design and wide variety of testing capabilities.
+                </p>
 
              </div>
-             <!-- <div class="tabContent">
+             <div class="tabContent">
                  <div v-if="activeTabName === 'aboutUs'" class="Career">
                  </div>
                  <div  v-if="activeTabName === 'Contact Us'" class="ContactUs">
+
                  </div>
-             </div> -->
+             </div>
          </el-col>
          <el-col :span="2">
          </el-col>
@@ -85,6 +98,10 @@
 .about-us {
     //color: $light-color;
     min-height: 400px;
+    
+}
+.aboutus-item {
+    span
 }
 .content{
     //font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;

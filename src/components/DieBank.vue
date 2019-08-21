@@ -2,13 +2,39 @@
  <div class="die-bank">
     <img-nav :type="type" />
      <div class="content">
-         <h2>The Largest Continues Source of Dies in Asia</h2>
-         <h3>100% traceable, certified and guaranteed.</h3>
+         <h2>Your Semiconductor Solutions.</h2>
+         <h3>The largest continuous source of semiconductors in Asia.</h3>
          <ul>
-             <li>Over 13,000 part numbers in stock.</li>
-             <li>Over 65,000 square feet of class 10,000 clean room.</li>
-             <li>Devices in hermetically sealed cabinets for storage.</li>
+             <li>Over 13,000 part numbers in stock</li>
+             <li>Over 65,000 square feet of class 10,000 clean rooms</li>
+             <li>Over 200 million die in stock</li>
+             <li>Die in hermetically sealed cabinets for storage</li>
          </ul>
+         <div style="display: flex;justify-content: center;align-items: center;margin: 15px auto;">
+             <div>
+                 <label>
+                     Wafer Thinning
+                 </label>
+                 <label>
+                     Back Metallization
+                 </label>
+                 <label>
+                     Wafer Probing
+                 </label>
+             </div>
+             <!-- <img src="../images/dieBank.jpeg"> -->
+             <div>
+                 <label>
+                     Wafer Sawing
+                 </label>
+                 <label>
+                     Visual Inspection
+                 </label>
+                 <label>
+                     Die Sorting
+                 </label>
+             </div>
+         </div>
          <el-button style="margin-top: 20px"  @click="dialogFormVisible = true">SIGN UP FOR DIE BANK INVENTORY UPDATES</el-button>
          <el-dialog title="Sign Up" :visible.sync="dialogFormVisible">
              <el-form ref="form" :model="form" :rules="rules">
@@ -43,7 +69,10 @@
 <style lang="scss">
 .die-bank {
     color: $light-color;
-    min-height: 600px;
+    min-height: 800px;
+    h2 {
+        margin-bottom: 10px;
+    }
 }
 </style>
 <script>
@@ -94,8 +123,8 @@ export default {
                         first_name: this.form.firstName,
                         last_name: this.form.lastName,
                         position: this.form.position,
-                        company_name: this.companyName,
-                        company_website: this.companyWebsite
+                        company_name: this.form.companyName,
+                        company_website: this.form.companyWebsite
                     }).then(res => {
                         console.log(res)
 
@@ -122,29 +151,60 @@ export default {
 </script>
 <style scoped lang="scss">
     .die-bank>div.content{
-        width: 530px;
+        width: 906px;
         margin: auto;
         text-align: left;
         line-height: 30px;
         ul{
-            margin: auto 10px;
+            margin: auto;
+            height: 60px;
             li{
-                list-style: inside;
-                color: #0a0a0a;
+                list-style: none;
+                color: #8e8a8a;
+                width: 453px;
+                display: inline-block;
+                line-height: 30px;
+                position: relative;
+                padding-left: 10px;
+                box-sizing: border-box;
+                &:before{
+                    content: '';
+                    height: 5px;
+                    width: 5px;
+                    background: #4e2d66;
+                    position: absolute;
+                    left: 0;
+                    top:12px
+                }
             }
         }
         h2{
             margin: 10px auto;
-            color: black;
+            color: #8e8a8a;
+            font-size: 26px;
+            &:after{
+                content: '';
+                height: 10px;
+                width: 95px;
+                border-bottom: 2px solid #4e2d66;
+                display: block;
+            }
         }
         h3{
             margin-bottom: 10px;
             color: black;
+            font-size: 24px;
         }
     }
     .el-button:focus, .el-button:hover {
         color: #fefefe;
         border-color: #4e2d66;
         background-color: #4e2d66;
+    }
+    label{
+        font-size: 24px;
+        color: #4e2d66;
+        line-height: 95px;
+        font-weight: bold;
     }
 </style>

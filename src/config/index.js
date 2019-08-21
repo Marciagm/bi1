@@ -1,5 +1,5 @@
 import dieBankImg from '@/images/dieBank.jpeg'
-import productsImg from '@/images/products.png'
+import productsImg from '@/images/products.jpeg'
 import servicesImg from '@/images/services.jpg'
 import aboutUsImg from '@/images/aboutUs.jpg'
 

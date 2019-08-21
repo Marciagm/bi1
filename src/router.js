@@ -10,6 +10,7 @@ import Linear from './components/Products/Linear.vue'
 import Logic from './components/Products/Logic.vue'
 import Opto from './components/Products/Opto.vue'
 import DT from './components/Products/Dt.vue'
+import ProductsMain from './components/Products/ProductsMain.vue'
 
 
 
@@ -29,6 +30,11 @@ const router = [
         name: 'products',
         component: Products,
         children: [
+            {
+                path: '/',
+                name: 'main',
+                component: ProductsMain,
+            },
             {
                 path: 'memory',
                 name: 'memory',
