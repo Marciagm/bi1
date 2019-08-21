@@ -119,7 +119,7 @@ export default {
                 if (valid) {
                     this.dialogFormVisible = false;
                     createClient({
-                        email_adress: this.form.emailAddress,
+                        email_address: this.form.emailAddress,
                         first_name: this.form.firstName,
                         last_name: this.form.lastName,
                         position: this.form.position,
