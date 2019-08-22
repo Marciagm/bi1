@@ -94,7 +94,7 @@ export default {
     padding: 15px 0 20px 20px;
     border-left: 1px solid #e4e7ed;
     h2{
-        margin: 10px auto;
+        margin: 15px auto;
         color: #8e8a8a;
         font-size: 26px;
         text-align: left;
@@ -108,8 +108,8 @@ export default {
     }
     h3{
         margin-bottom: 10px;
-        color: black;
-        font-size: 24px;
+        color: $txt-s1-color;
+        font-size: $ftn-big-size;
     }
     ul{
         margin: auto 10px;
@@ -117,8 +117,8 @@ export default {
             list-style: none;
             color: #0a0a0a;
             font-size: 16px;
-            margin-bottom: 5px;
-            line-height: 30px;
+            line-height: 22px;
+            margin-top: 16px;
             span {
                 color: #4e2d66;
                 font-size: 16px;

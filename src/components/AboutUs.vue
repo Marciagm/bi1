@@ -23,14 +23,18 @@
          <el-col :span="16">
              <div class="content">
                  <h2>Corporate Headquarters</h2>
-                 <p style="margin-bottom: 20px;font-size: 16px;line-height: 1.6;">
-                     If you have any questions or queries please contact us on :+65 98915586 or email sales@bi-components.com.<br>
+                 <p style="margin-bottom: 20px;font-size: 18px;line-height: 1.6;">
+                     If you have any questions or queries please contact us on :
+                     <span class="hilight">+65 98915586</span> or email sales@bi-components.com.<br>
+                     <br/>
+                     <span class="firm-info" style="font-weight: bold;">
                      BI  COMPONENTS<br>
                      51 Goldhill Plaza #07-10/11<br>
                      Singapore 308900<br>
-                     TEL:+65 98915586<br>
-                     FAX:+65 63543261<br>
-                     sales@bi-components.com<br>
+                     TEL:&nbsp;&nbsp;&nbsp;&nbsp;+65 98915586<br>
+                     FAX:&nbsp;&nbsp;&nbsp;&nbsp;+65 63543261<br>
+                     <span class="hilight">sales@bi-components.com</span><br>
+                     </span>
                  </p>
                  Headquartered in Singapore. BI Components strives to be a world leading independent distributor specialist, offering comprehensive wafer and bare die inventory for hybrid IC and multi-chip module manufacturers in global marketplace. BI's extensive product line of hi-reliability bare die components, has made the company one the top and largest bare die supplier of choice for Aerospace, Defense, Space, Medical, and Industrial markets in Asia and worldwide.<br/><br/>
                  The corporate facility is equipped with ESD protected class 10,000 cleanrooms, nitrogen-filled and hermetically sealed stored inventory. Combined with strict ISO9100 quality systems, our extensive inventory ensures quick delivery without compromise to quality. All dies are visually inspected to MIL-STD-833 methods and 100% probed. Aerospace-grade products are 100% screened and aging-tested.<br/><br/>
@@ -85,6 +89,10 @@
 .about-us {
     //color: $light-color;
     min-height: 400px;
+}
+.hilight {
+    color: $btn-bg-dark;
+    font-weight: bold;
 }
 .content{
     //font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;

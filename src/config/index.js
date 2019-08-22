@@ -114,7 +114,7 @@ export const navNew = [
         routePath: '/services',
         children: [
             {
-                title: 'Manufacturing',
+                title: 'Solutions',
                 routePath: '/services',
                 parent: 'Services'
             },
@@ -149,13 +149,13 @@ export const imgNavInfo = {
         img: dieBankImg,
         text: '',
         h1Text: 'Die Bank',
-        h2Text: ''
+        h2Text: 'The Largest Continuous Source of Semiconductor in Asia'
     },
     services: {
         img: servicesImg,
         text: '',
-        h1Text: '',
-        h2Text: ''
+        h1Text: 'Solutions',
+        h2Text: 'Focused on providing quality solutions'
     },
     products: {
         img: productsImg,
@@ -167,7 +167,7 @@ export const imgNavInfo = {
         img: aboutUsImg,
         text: '',
         h1Text: '',
-        h2Text: ''
+        h2Text: 'Your Semiconductor Solutions'
     }
 }
 export const content = {

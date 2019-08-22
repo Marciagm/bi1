@@ -94,7 +94,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     .nav {
-        margin-bottom: 20px;
+        //margin-bottom: 20px;
         vertical-align: bottom;
         .nav-link {
             color: #0a0a0a;

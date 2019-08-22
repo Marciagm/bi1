@@ -35,7 +35,7 @@ export default {
 </script>
 <style lang="scss" scoped>
      .searchWrapper{
-        margin: 0 30px 0 20%;
+        margin: 0 10%;
         .customSelect{
             height: 65px;
         }
@@ -54,12 +54,16 @@ export default {
             vertical-align: middle;
             display: table-cell;
             position: relative;
-            border: 1px solid #1485cc;
-            padding: 0 20px;
+            border: 1px solid $btn-bg-dark;
+            padding: 0 30px;
             width: 1px;
             white-space: nowrap;
-            background-color: #1485cc;
+            background-color: $btn-bg-dark;
             color: #fefefe;
+            .el-icon-search {
+                font-weight: 900;
+                font-size: 18px;
+            }
         }
         /deep/ .el-input-group__prepend{
             vertical-align: middle;
@@ -75,6 +79,7 @@ export default {
             color: #8d949d;
             height: 100%;
             margin: 0;
+            font-size:1.2em;
         }
         /deep/ .el-select-dropdown__item.selected {
             font-weight: 700;
