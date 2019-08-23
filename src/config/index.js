@@ -18,19 +18,22 @@ export const tableInfo = {
         {
             prop: 'HRPartNumber',
             label: 'HR Part Number',
-            width: 150
+            width: 160
         },
         {
             prop: 'Generic',
-            label: 'Generic'
+            label: 'Generic',
+            width: 100
         },
         {
             prop: 'Size',
-            label: 'Size'
+            label: 'Size',
+            width: 100
         },
         {
             prop: 'Org',
-            label: 'Org'
+            label: 'Org',
+
         },
         {
             prop: 'MemorySpeed',
@@ -39,15 +42,18 @@ export const tableInfo = {
         },
         {
             prop: 'Description',
-            label: 'Description'
+            label: 'Description',
+            width: 130
         },
         {
             prop: 'AlternativePartNumber1',
             label: 'Alternative Part Number1',
+            width: 130
         },
         {
             prop: 'AlternativePartNumber2',
-            label: 'Alternative Part Number2'
+            label: 'Alternative Part Number2',
+            width: 130
         },
     ]
 }

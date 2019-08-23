@@ -1,7 +1,7 @@
 <template>
     <div class="products">
-        <search :searchHandler="searchHandler"/>
-         <img-nav type="products" />
+        <search :searchHandler="searchHandler" v-show="isSearchShow"/>
+        <img-nav type="products" />
         <el-row class="tac">
             <el-col :span="6">
                 <div class="tabWrapper">
@@ -52,6 +52,7 @@
            tableColumn: tableInfo.tableColumn,
            tableData: memory,
            content: '',
+           isSearchShow: false,
        }
       },
     methods: {
