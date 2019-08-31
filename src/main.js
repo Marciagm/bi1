@@ -7,8 +7,10 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 
 import Element from 'element-ui';
+import lang from 'element-ui/lib/locale/lang/en'
+import locale from 'element-ui/lib/locale'
 import 'element-ui/lib/theme-chalk/index.css';
-
+locale.use(lang)
 Vue.use(Router);
 Vue.use(Element, {
   size: 'medium' // set element-ui default size

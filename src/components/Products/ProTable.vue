@@ -5,13 +5,15 @@
 				border
 				:fit="true"
 				:header-row-style="getHeaderStyle"
+				:header-click="headerClick"
 				>
 			<el-table-column v-for="(item, index) in tableColumn" :key="index"
-					sortable
 					:prop="item.prop"
 					:label="item.label"
 					:width="item.width"
 					:data-tag="item.prop"
+					:filters="filterData[item.prop]"
+      				:filter-method="filterHandler"
 			>
 			</el-table-column>
 		</el-table>
@@ -21,7 +23,8 @@
 	export default {
 		data(){
 			return{
-				testData: null
+				testData: null,
+				filterData: {}
 			}
 		},
 		props:{
@@ -30,8 +33,40 @@
 		},
 		
 		mounted () {
+			const keys = Object.keys(this.tableData[0]);
+			console.log(keys);
+			for (let key of keys) {
+				const set = new Set();
+				for (let i = 0; i < this.tableData.length; i++) {
+					const item = this.tableData[i];
+					if (item[key]) {
+						set.add(item[key])
+					}
+					
+				}
+				const array = [...set]
+				this.filterData[key] = []
+				for (let j = 0; j < array.length; j++) {
+					this.filterData[key].push({text: array[j], value: array[j]});
+				}
+			}
+			
+			
 		},
 		methods: {
+			headerClick () {
+				alert(1)
+			},
+			filterHandler (value, row , column) {
+				const property = column['property'];
+				//return row[property] == value;
+				console.log(row[property], value)
+				console.log(row[property] == value)
+				console.log(this.filterData)
+				const filterPart = document.getElementsByClassName('el-table-filter__bottom')
+				console.log(filterPart)
+				return row[property] == value
+			},
 			search (v) {
 				
 				var trs = document.getElementsByTagName('tr');

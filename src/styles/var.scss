@@ -13,7 +13,17 @@ $ftn-big-size: 21px;
 $txt-s1-color: #2c3e50;
 $sep: #e4e7ed;
 
+.el-table th>.cell.highlight {
+    color: $p3 !important;
+}
+.el-checkbox__input.is-checked+.el-checkbox__label {
+    color: $p3 !important;
+}
 
+.el-checkbox__input.is-checked .el-checkbox__inner, .el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    background-color: $p3 !important;
+    border-color: $p3 !important;
+}
 .sub-content{
     //font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 18px;
