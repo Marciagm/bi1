@@ -34,17 +34,17 @@
 		
 		mounted () {
 			const keys = Object.keys(this.tableData[0]);
-			console.log(keys);
 			for (let key of keys) {
 				const set = new Set();
 				for (let i = 0; i < this.tableData.length; i++) {
 					const item = this.tableData[i];
 					if (item[key]) {
-						set.add(item[key])
+						set.add(item[key].toLowerCase());
 					}
-					
 				}
 				const array = [...set]
+				array.sort();
+				
 				this.filterData[key] = []
 				for (let j = 0; j < array.length; j++) {
 					this.filterData[key].push({text: array[j], value: array[j]});
@@ -65,7 +65,7 @@
 				console.log(this.filterData)
 				const filterPart = document.getElementsByClassName('el-table-filter__bottom')
 				console.log(filterPart)
-				return row[property] == value
+				return row[property].toLowerCase() == value.toLowerCase()
 			},
 			search (v) {
 				
@@ -91,7 +91,7 @@
 				}
 				this.$store.commit('setSearchValue', '')
 			},
-			getHeaderStyle (row, rowIndex) {
+			getHeaderStyle (row) {
 				return {
 					'font-weight': 900,
 					color: '#0a0a0a'

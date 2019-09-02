@@ -33,12 +33,12 @@
                      Singapore 308900<br>
                      TEL:&nbsp;&nbsp;&nbsp;&nbsp;+65 98915586<br>
                      FAX:&nbsp;&nbsp;&nbsp;&nbsp;+65 63543261<br>
-                     <span class="hilight">sales@bi-components.com</span><br>
+                     <a href="mailto:sales@bi-components.com" target="_blank" class="hilight">sales@bi-components.com</a><br>
                      </span>
                  </p>
                  <p style="font-size: 18px;">
-                 Headquartered in Singapore. BI Components strives to be a world leading independent distributor specialist, offering comprehensive wafer and bare die inventory for hybrid IC and multi-chip module manufacturers in global marketplace. BI's extensive product line of hi-reliability bare die components, has made the company one the top and largest bare die supplier of choice for Aerospace, Defense, Space, Medical, and Industrial markets in Asia and worldwide.<br/><br/>
-                 BI Components strives to be a world leading semiconductor solution provider, offering comprehensive bare die & wafer inventory with value-added die processing services and packaging solutions for hybrid IC and multi-chip module manufacturers in global marketplace.<br/><br/>
+                 Headquartered in Singapore. BI Components strives to be a world leading semiconductor solution provider, offering comprehensive bare die & wafer inventory with value-added die processing services and packaging solutions for hybrid IC and multi-chip module manufacturers in global marketplace. BI's extensive product line of hi-reliability bare die components, has made the company one the top and largest bare die supplier of choice for Aerospace, Defense, Space, Medical, and Industrial markets in Asia and worldwide.<br/><br/>
+                 The corporate facility is equipped with ESD protected class 10,000 cleanrooms, nitrogen-filled and hermetically sealed stored inventory. Combined with strict ISO9100 quality systems, our extensive inventory ensures quick delivery without compromise to quality. All dies are visually inspected to MIL-STD-833 methods and 100% probed. Aerospace-grade products are 100% screened and aging-tested.<br/><br/>
                  With the broadest offering of bare die products and packaging solutions in the industry, BI Components became recognized both as a leading bare die add value service provider and a semiconductor solutions provider in Asian and global marketplace.</p>
 
              </div>
@@ -94,6 +94,7 @@
 .hilight {
     color: $btn-bg-dark;
     font-weight: bold;
+    text-decoration: none;
 }
 .content{
     //font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
